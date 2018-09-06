@@ -1,11 +1,11 @@
 <div id ='navigator-main'>
 	<ul class="bttns">
-		<li id = 'nav-beacons'><a class = 'nav' href="https://i.imgur.com/hhAMqDm.mp4">Beacons</a></li>
-		<li id = 'nav-messages'><a  class = 'nav' href="https://i.imgur.com/tE6YQV1.mp4">Messages</a></li>
-		<li id = 'nav-locations'><a  class = 'nav' href="https://i.imgur.com/VKjWBKH.gif">Locations</a></li>
-		<li id = 'nav-analytics'><a  class = 'nav' href="https://i.imgur.com/Hogicvd.mp4">Analytics</a></li>
-		<li id = 'nav-company'><a  class = 'nav' href="https://i.imgur.com/od6BYLY.mp4">Company</a></li>
-		<li id = 'nav-users'><a  class = 'nav' href="https://i.imgur.com/RqkHNkd.jpg">Users</a></li>
+		<li id = 'nav-beacons'>Beacons</li>
+		<li id = 'nav-messages'>Messages</li>
+		<li id = 'nav-locations'>Locations</li>
+		<li id = 'nav-analytics'>Analytics</li>
+		<li id = 'nav-company'>Company</li>
+		<li id = 'nav-users'>Users</li>
 	</ul>
 </div>
 <div>
@@ -16,6 +16,8 @@
 		width: 100%;
 		height: 100%;
 		min-height: 70vh;
+    	box-sizing: border-box; /*Required to make border-right to be inwards*/
+		border-right: 3px groove rgba(203, 216, 224, 0.5);
 	}
 	.bttns{
 		width:100%;
@@ -24,29 +26,29 @@
 	    margin: 0;
 	    padding: 0;
 
+
+		color: rgb(198,225,242);
+		font-family: 'IBM Plex Sans', sans-serif;
+		text-decoration: none;
+
 	}
 	li{
 		width: 100%;
 		height: 10vh;
 	}
-	.bttns a {
-		color: rgb(198,225,242);
-		font-family: 'IBM Plex Sans', sans-serif;
-		text-decoration: none;
-}
-		
+
 </style>
 <script type="text/javascript">
 
 	function selectNavigator(id) {
-		var color = "";
+		var colorEmpty = "";
 		var colorSelected = "rgba(80,165,219)";
-		$("#nav-beacons").css("background-color", color);
-		$("#nav-messages").css("background-color", color);
-		$("#nav-locations").css("background-color", color);
-		$("#nav-analytics").css("background-color", color);
-		$("#nav-company").css("background-color", color);
-		$("#nav-users").css("background-color", color);
+		$("#nav-beacons").css("background-color", colorEmpty);
+		$("#nav-messages").css("background-color", colorEmpty);
+		$("#nav-locations").css("background-color", colorEmpty);
+		$("#nav-analytics").css("background-color", colorEmpty);
+		$("#nav-company").css("background-color", colorEmpty);
+		$("#nav-users").css("background-color", colorEmpty);
 		$(id).css("background-color", colorSelected);
 	}
 	function fitNavigator(){
@@ -56,15 +58,19 @@
         textFit(document.getElementById('nav-analytics'),{alignVert: true, alignHoriz: true});
         textFit(document.getElementById('nav-company'),{alignVert: true, alignHoriz: true});
         textFit(document.getElementById('nav-users'),{alignVert: true, alignHoriz: true});
-
 	}
 
 	$(document).ready( 
 		function(){
 			fitNavigator();
-			selectNavigator("#nav-analytics");
-			
+			selectNavigator("#nav-beacons");
 		}
 	);
 	$(window).on('resize', fitNavigator);
+	document.getElementById('nav-beacons').addEventListener("click", function(){selectNavigator('#nav-beacons');});
+	document.getElementById('nav-analytics').addEventListener("click", function(){selectNavigator('#nav-analytics');});
+	document.getElementById('nav-users').addEventListener("click", function(){selectNavigator('#nav-users');});
+	document.getElementById('nav-company').addEventListener("click", function(){selectNavigator('#nav-company');});
+	document.getElementById('nav-messages').addEventListener("click", function(){selectNavigator('#nav-messages');});
+	document.getElementById('nav-locations').addEventListener("click", function(){selectNavigator('#nav-locations');});
 </script>
