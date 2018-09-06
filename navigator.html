@@ -1,7 +1,10 @@
 <div id ='navigator-main'>
 	<ul class="bttns">
 		<li id = 'nav-beacons'>Beacons
-		<div id = "nav-selectedIcon" style="position: absolute; z-index: 100;"><div id = 'diamond'></div></div></li>
+		<div id = "nav-selectedIcon" style="position: absolute; z-index: 100;">
+			<div id = 'diamond'></div>
+			<div id = 'diamond-black'></div>
+		 </div></li>
 		<li id = 'nav-messages'>Messages</li>
 		<li id = 'nav-locations'>Locations</li>
 		<li id = 'nav-analytics'>Analytics</li>
@@ -50,23 +53,43 @@
 	#diamond {
 		width: 0;
 		height: 0;
-		border: 10px solid transparent;
-		border-bottom-color: red;
+		border: 6px solid transparent;
+		border-bottom-color: rgb(156,187,206);
 		position: relative;
-		top: -20px;
+		top: -12px;
 
-
-		left: -12px;
+		left: -8px;
 	}
 	#diamond:after {
 		content: '';
 		position: absolute;
-		left: -10px;
-		top: 10px;
+		left: -6px;
+		top: 6px;
 		width: 0;
 		height: 0;
-		border: 10px solid transparent;
-		border-top-color: red;
+		border: 6px solid transparent;
+		border-top-color: rgb(156,187,206);
+	}
+
+	#diamond-black {
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-bottom-color: rgb(56,67,73);
+		position: relative;
+		top: -8px;
+		left: -8px;
+		position: absolute; z-index: -1;
+	}
+	#diamond-black:after {
+		content: '';
+		position: absolute;
+		left: -6px;
+		top: 6px;
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-top-color:  rgb(56,67,73);
 	}
 
 </style>
@@ -91,6 +114,7 @@
 
 		$(id).css("background-color", colorSelected);
 		$(id).css("border-right", " 3px groove rgba(230, 230, 255,0.5)");
+		$("#nav-selectedIcon").appendTo(id);
 	}
 	function fitNavigator(){
         textFit(document.getElementById('nav-beacons'),{alignVert: true, alignHoriz: true});
