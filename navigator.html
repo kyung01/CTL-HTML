@@ -1,11 +1,13 @@
 <div id ='navigator-main'>
 	<ul class="bttns">
-		<li id = 'nav-beacons'>Beacons</li>
+		<li id = 'nav-beacons'>Beacons
+		<div id = "nav-selectedIcon" style="position: absolute; z-index: 100;"><div id = 'diamond'></div></div></li>
 		<li id = 'nav-messages'>Messages</li>
 		<li id = 'nav-locations'>Locations</li>
 		<li id = 'nav-analytics'>Analytics</li>
 		<li id = 'nav-company'>Company</li>
 		<li id = 'nav-users'>Users</li>
+
 	</ul>
 </div>
 <div>
@@ -36,6 +38,35 @@
 	li{
 		width: 100%;
 		height: 10vh;
+	}
+	#nav-selectedIcon{
+		top:50%;
+		left: 25vw;
+	}
+
+	#diamond-indent{
+	}
+
+	#diamond {
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-bottom-color: red;
+		position: relative;
+		top: -20px;
+
+
+		left: -12px;
+	}
+	#diamond:after {
+		content: '';
+		position: absolute;
+		left: -10px;
+		top: 10px;
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-top-color: red;
 	}
 
 </style>
