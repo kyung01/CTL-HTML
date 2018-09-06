@@ -25,6 +25,7 @@
 	    list-style: none;
 	    margin: 0;
 	    padding: 0;
+    	box-sizing: border-box; /*Required to make border-right to be inwards*/
 
 
 		color: rgb(198,225,242);
@@ -41,15 +42,24 @@
 <script type="text/javascript">
 
 	function selectNavigator(id) {
-		var colorEmpty = "";
+		var emptyString = "";
 		var colorSelected = "rgba(80,165,219)";
-		$("#nav-beacons").css("background-color", colorEmpty);
-		$("#nav-messages").css("background-color", colorEmpty);
-		$("#nav-locations").css("background-color", colorEmpty);
-		$("#nav-analytics").css("background-color", colorEmpty);
-		$("#nav-company").css("background-color", colorEmpty);
-		$("#nav-users").css("background-color", colorEmpty);
+		$("#nav-beacons").		css("background-color", emptyString);
+		$("#nav-messages").		css("background-color", emptyString);
+		$("#nav-locations").	css("background-color", emptyString);
+		$("#nav-analytics").	css("background-color", emptyString);
+		$("#nav-company").		css("background-color", emptyString);
+		$("#nav-users").		css("background-color", emptyString);
+
+		$("#nav-beacons").		css("border-right", emptyString);
+		$("#nav-messages").		css("border-right", emptyString);
+		$("#nav-locations").	css("border-right", emptyString);
+		$("#nav-analytics").	css("border-right", emptyString);
+		$("#nav-company").		css("border-right", emptyString);
+		$("#nav-users").		css("border-right", emptyString);
+
 		$(id).css("background-color", colorSelected);
+		$(id).css("border-right", " 3px groove rgba(230, 230, 255,0.5)");
 	}
 	function fitNavigator(){
         textFit(document.getElementById('nav-beacons'),{alignVert: true, alignHoriz: true});
