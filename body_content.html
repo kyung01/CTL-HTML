@@ -1,0 +1,157 @@
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700" rel="stylesheet"><!--font-family: 'IBM Plex Sans', sans-serif;-->
+<div>
+<a id = "bttn_registerNewBeacon" href="#" class="myButton">Register New Beacon</a>
+<div id = "beaconTable">
+	<div claas = "beacon_information">
+		
+	</div>
+	<div class="item">
+		<input type="checkbox" id="beacon_1_power" name="" value="">
+		<div class="toggle">
+			<label for="beacon_1_power"><i></i></label>
+		</div>
+	</div>	
+
+	<div class="item">
+		<input type="checkbox" id="beacon_2_power" name="" value="">
+		<div class="toggle">
+			<label for="beacon_2_power"><i></i></label>
+		</div>
+	</div>	
+</div>
+
+
+
+
+
+
+
+
+<div class="item">
+			<p>Today Sqweweqummary</p>
+			<input type="checkbox" id="toggle_todawwwy_summary2qw" name="" value="">
+			<div class="toggle">
+				<label for="toggle_todawwwy_summary2qw"><i></i></label>
+			</div>
+		</div>
+
+<style type="text/css">
+
+.myButton {
+	-moz-box-shadow:inset 0px -1px 34px 3px #2a94d1;
+	-webkit-box-shadow:inset 0px -1px 34px 3px #2a94d1;
+	box-shadow:inset 0px -1px 34px 3px #2a94d1;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6dbeed), color-stop(1, #4495c4));
+	background:-moz-linear-gradient(top, #6dbeed 5%, #4495c4 100%);
+	background:-webkit-linear-gradient(top, #6dbeed 5%, #4495c4 100%);
+	background:-o-linear-gradient(top, #6dbeed 5%, #4495c4 100%);
+	background:-ms-linear-gradient(top, #6dbeed 5%, #4495c4 100%);
+	background:linear-gradient(to bottom, #6dbeed 5%, #4495c4 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6dbeed', endColorstr='#4495c4',GradientType=0);
+	background-color:#6dbeed;
+	-moz-border-radius:17px;
+	-webkit-border-radius:17px;
+	border-radius:17px;
+	border:1px solid #97b2c2;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size:45px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 18px #263666;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4495c4), color-stop(1, #6dbeed));
+	background:-moz-linear-gradient(top, #4495c4 5%, #6dbeed 100%);
+	background:-webkit-linear-gradient(top, #4495c4 5%, #6dbeed 100%);
+	background:-o-linear-gradient(top, #4495c4 5%, #6dbeed 100%);
+	background:-ms-linear-gradient(top, #4495c4 5%, #6dbeed 100%);
+	background:linear-gradient(to bottom, #4495c4 5%, #6dbeed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4495c4', endColorstr='#6dbeed',GradientType=0);
+	background-color:#4495c4;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+
+
+
+.item {
+	position: relative;
+	box-sizing: border-box;
+	background: #ffffff;
+}
+
+
+
+input[type="checkbox"] {
+	display: none;	
+}
+
+.toggle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 9px;
+	margin: auto;
+	width: 51px;
+	height: 31px;
+}
+
+.toggle label,
+.toggle i {
+	box-sizing: border-box;
+	display: block;
+	background: #ffffff;
+}
+
+.toggle label {
+	width: 51px;
+	height: 32px;
+	border-radius: 32px; 
+	border: 2px solid #e5e5e5;
+	transition: all 0.30s ease;
+}
+
+.toggle i {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 28px;
+	height: 28px;
+	border-radius: 28px;
+	box-shadow: 0 0 1px 0 rgba(0,0,0, 0.25),
+				0 3px 3px 0 rgba(0,0,0, 0.15);
+	background: #ffffff;
+	transition: all 0.3s cubic-bezier(0.275, -0.450, 0.725, 1.450);
+}
+
+input[type="checkbox"]:active + .toggle i {
+	width: 35px;
+}
+
+input[type="checkbox"]:active + .toggle label,
+input[type="checkbox"]:checked + .toggle label {
+	border: 16px solid #50A5DB;
+}
+
+input[type="checkbox"]:checked + .toggle i {
+	left: 21px;
+}
+
+input[type="checkbox"]:checked:active + .toggle label {
+	border: 16px solid #e5e5e5;
+}
+
+input[type="checkbox"]:checked:active + .toggle i {
+	left: 14px;
+}
+
+
+        </style>
