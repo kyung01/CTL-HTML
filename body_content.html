@@ -12,7 +12,7 @@
     <th>Expiration</th>
     <th>Group</th>
   </tr>
-  <tr id = "beacon_1" class = "beaconInfo" >
+  <tr id = "beacon_1" class = "item" >
     <td class = "beaconName" >Beacon Name One</td>
     <td class = "beaconCoordinate">12.3456,78.0123</td> 
     <td class = "beaconStability">Stable</td>
@@ -28,7 +28,7 @@
     	</form>
     </td>
   </tr>
-  <tr id = "beacon_2" class = "beaconInfo" >
+  <tr id = "beacon_2" class = "item" >
     <td class = "beaconName" >Beacon Name Two</td>
     <td class = "beaconCoordinate">12.3456,78.0123</td> 
     <td class = "beaconStability">Stable</td>
@@ -351,6 +351,13 @@ input:checked + .slider:before {
  #tableMessage{
 
 	font-family: 'IBM Plex Sans', sans-serif;
+    border-collapse:collapse;/*This property collapses borders together*/
+ }
+ #tableMessage .item {
+ 	border-top: solid;
+ 	border-width: 3px;
+ 	border-color: rgb(200,200,200);
+
  }
 
 
