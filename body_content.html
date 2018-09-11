@@ -2,22 +2,32 @@
 <div class = "companyPage">
 	<p>Address</p>
 	<form>
-	 	<div class="tab"><input  type="text" name="firstname"></div>Company Name<br><br>
+	 	<img class="headingStar" src ="star.png">  Company Name <div class="tab"><input  type="text" name="firstname"></div><br><br>
 	 	
-	 	<div class="tab"><input  type="text" name="firstname"></div>Address<br><br>
+	 	<img class="headingStar" src ="star.png">  Address <div class="tab"><input  type="text" name="firstname"></div><br><br>
 	 	
-	 	<div class="tab"><input  type="text" name="firstname"></div>Zip Code<br><br>
+	 	<img class="headingStar" src ="star.png">  Zip Code <div class="tab"><input  type="text" name="firstname"></div><br><br>
 	 	
-	 	<div class="tab"><input  type="text" name="firstname"></div>City<br><br>
+	 	<img class="headingStar" src ="star.png">  City<div class="tab"><input  type="text" name="firstname"></div><br><br>
 	 	
-	 	<div class="tab"><input  type="text" name="firstname"></div>State<br><br>
+	 	<img class="headingStar" src ="star.png">  State <div class="tab"><input  type="text" name="firstname"></div><br><br>
 	 	
-	 	<div class="tab"><input  type="text" name="firstname"></div>Country<br><br>
+	 	<img class="headingStar" src ="star.png">  Country <div class="tab"><input  type="text" name="firstname"></div><br><br>
 	 	
-	 	<div class="tab"><input  type="text" name="firstname"></div>Phone Number<br><br>
+	 	<img class="headingStar" src ="star.png">  Phone Number <div class="tab"><input  type="text" name="firstname"></div><br><br>
 	 	
-	 	<div class="tab"><input  type="text" name="firstname"></div>Description<br>
 	</form>
+	<hr/>
+	<form id = "formDescription">	 	
+	 	<img class="headingStar" src ="star.png">  Description <div class="tab"><input id = "inputDescription" type="text" name="firstname"></div><br><br>
+	</form>
+	<hr />
+	<div id ="formLogo">
+			Logo<br>
+			<input type="file" name="pic" accept="image/*">
+  			<input id ="logoSubmitBttn" type="submit">
+		
+	</div>
 
 
 
@@ -28,34 +38,61 @@
 </div>
 <style type="text/css">
 	.companyPage{
-		margin-left: 5%;
-		width: 90%;
 	font-family: 'IBM Plex Sans', sans-serif;
+	margin-bottom: 10%;
 
 	}
 	form{
-		margin-top: 10%;
 		margin-left: 5%;
+		width: 90%;
+	}
+	#formDescription{
+		height: 300px;
+	}
+	#formLogo{
+		margin-left: 5%;
+		width: 76.5%;
+
 	}
 	p{
-		float: left;
+		margin-left: 2.5%;
 		display: inline-block;
-    position: absolute;
+		font-size: 200%;
+	}
+	hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    }
+    #hr-inline {
+    display: inline-block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    }
+    #inputDescription{
+    	height: 100%;
+    }
+	.headingStar{
+		width: 20px;
+		vertical-align: middle;
 	}
 	.tab { 
-		display: inline-block;
-    text-indent: 15%;
-    float: left;
-    position: absolute;
+    	width: 50%;
+    	height: 100%;
+		display: inline-grid;
+    float: right;
+    margin-right: 15%;
 
 			}
-	#bttn_registerNewBeacon{
-		float: right;
-		margin-top: 10px;
-		margin-bottom: 10px;
-		margin-right: 50px;
-
-	}
+			#logoSubmitBttn{
+				float: right;
+			}
 
 .myButton {
 	-moz-box-shadow:inset 0px -1px 34px 3px #2a94d1;
