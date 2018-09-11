@@ -1,71 +1,23 @@
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700" rel="stylesheet"><!--font-family: 'IBM Plex Sans', sans-serif;-->
-<div>
-<a id = "bttn_registerNewBeacon" href="#" class="myButton">ADD NEW USER</a>
-
-<table id = "tableUsers">
-  <tr>
-    <th>User</th>
-    <th>Group</th> 
-    <th>Email</th>
-    <th>Last Login</th>
-    <th>Location</th>
-  </tr>
-
-  <tr id = "0" class = "userInfo" >
-    <td class = "img"><img src = "person0.png"> </td>
-    <td class = "group">Company</td> 
-    <td class = "email">myEmail@gmail.com</td>
-    <td class = "lastLogin">Today 07:30 AM</td>
-    <td class = "location">Cambridge, MA</td>
-  </tr>
-  <tr id = "1" class = "userInfo" >
-    <td class = "img"><img src = "person1.png"> </td>
-    <td class = "group">Company</td> 
-    <td class = "email">myEmail@gmail.com</td>
-    <td class = "lastLogin">Today 07:30 AM</td>
-    <td class = "location">Cambridge, MA</td>
-  </tr>
-  <tr id = "2" class = "userInfo" >
-    <td class = "img"><img src = "person2.png"> </td>
-    <td class = "group">Company</td> 
-    <td class = "email">myEmail@gmail.com</td>
-    <td class = "lastLogin">Today 07:30 AM</td>
-    <td class = "location">Cambridge, MA</td>
-  </tr>
-
-  <tr id = "3" class = "userInfo" >
-    <td class = "img"><img src = "person3.png"> </td>
-    <td class = "group">Company</td> 
-    <td class = "email">myEmail@gmail.com</td>
-    <td class = "lastLogin">Today 07:30 AM</td>
-    <td class = "location">Cambridge, MA</td>
-  </tr>
-
-  <tr id = "4" class = "userInfo" >
-    <td class = "img"><img src = "person4.png"> </td>
-    <td class = "group">Company</td> 
-    <td class = "email">myEmail@gmail.com</td>
-    <td class = "lastLogin">Today 07:30 AM</td>
-    <td class = "location">Cambridge, MA</td>
-  </tr>
-
-  <tr id = "5" class = "userInfo" >
-    <td class = "img"><img src = "person5.png"> </td>
-    <td class = "group">Company</td> 
-    <td class = "email">myEmail@gmail.com</td>
-    <td class = "lastLogin">Today 07:30 AM</td>
-    <td class = "location">Cambridge, MA</td>
-  </tr>
-
-  <tr id = "6" class = "userInfo" >
-    <td class = "img"><img src = "person6.png"> </td>
-    <td class = "group">Company</td> 
-    <td class = "email">myEmail@gmail.com</td>
-    <td class = "lastLogin">Today 07:30 AM</td>
-    <td class = "location">Cambridge, MA</td>
-  </tr>
-  
-</table>
+<div class = "companyPage">
+	<p>Address</p>
+	<form>
+	 	<div class="tab"><input  type="text" name="firstname"></div>Company Name<br><br>
+	 	
+	 	<div class="tab"><input  type="text" name="firstname"></div>Address<br><br>
+	 	
+	 	<div class="tab"><input  type="text" name="firstname"></div>Zip Code<br><br>
+	 	
+	 	<div class="tab"><input  type="text" name="firstname"></div>City<br><br>
+	 	
+	 	<div class="tab"><input  type="text" name="firstname"></div>State<br><br>
+	 	
+	 	<div class="tab"><input  type="text" name="firstname"></div>Country<br><br>
+	 	
+	 	<div class="tab"><input  type="text" name="firstname"></div>Phone Number<br><br>
+	 	
+	 	<div class="tab"><input  type="text" name="firstname"></div>Description<br>
+	</form>
 
 
 
@@ -73,12 +25,34 @@
 
 
 
-
+</div>
 <style type="text/css">
+	.companyPage{
+		margin-left: 5%;
+		width: 90%;
+	font-family: 'IBM Plex Sans', sans-serif;
+
+	}
+	form{
+		margin-top: 10%;
+		margin-left: 5%;
+	}
+	p{
+		float: left;
+		display: inline-block;
+    position: absolute;
+	}
+	.tab { 
+		display: inline-block;
+    text-indent: 15%;
+    float: left;
+    position: absolute;
+
+			}
 	#bttn_registerNewBeacon{
 		float: right;
-		margin-top: 30px;
-		margin-bottom: 30px;
+		margin-top: 10px;
+		margin-bottom: 10px;
 		margin-right: 50px;
 
 	}
@@ -125,28 +99,65 @@
 
 
 
-	 #tableUsers{
-	 	width: 95%;
 
-		font-family: 'IBM Plex Sans', sans-serif;
-	    border-collapse:collapse;/*This property collapses borders together*/
-	    margin-left: 1.5%;
-	 }
-	.userInfo{
-		text-align: center;
 
-	 	border-top: solid;
-	 	border-width: 3px;
-	 	border-color: rgb(200,200,200);
 
-	}
-	.img{
-		width: 10%;
-	}
-	.img img{
- 	width: 100%;
- 	margin-top:5px;
-	}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+ #tableBeacons{
+
+	font-family: 'IBM Plex Sans', sans-serif;
+ }
 
 
         </style>
+    
